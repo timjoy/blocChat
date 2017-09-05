@@ -6,6 +6,10 @@
 
     Room.all = rooms;
 
+
+  };
+
+
     return Room;
   }
 

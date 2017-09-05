@@ -3,3 +3,7 @@
     <section class="chat rooms" ng-repeat="room in home.rooms">
       <p>{{ room.$value }}</p>
     </section>
+
+    <a ui-sref="modal">
+        <button class="btn" type="button" ng-click="modal.newRoom">New room{{ $uibModal }}</button>
+    </a>

@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl(Room) {
+    function HomeCtrl(Room, $uibModal) {
       this.rooms = Room.all;
     }
 
