@@ -1,16 +1,24 @@
+(function() {
+    function ModalCtrl(Modal, $uibModalInstance) {
+      this.closeModalSuccess = function() {
+        // Do stuff ->Somehow, make the new added
+        // room a member of the Room{}array
+        // in Room.js
+        var data = 'Data to optionally pass on'
+        $uibModalInstance.close(data)
+      };
+
+      this.closeModalCancel = function() {
+        // Do nothing, just close
+        $uibModalInstance.close()
+      };
 
 
 
 
- (function() {
-     function ModalCtrl(Modal, Room, $uibModal) {
 
-
-       this.name = name;
-
-     }
-
-     angular
-        .module('blocChat')
-        .controller('ModalCtrl', [ ModalCtrl,]);
- })();
+    };
+      angular
+         .module('blocChat')
+         .controller('ModalCtrl', ['$uibModalInstance', ModalCtrl]);
+})();

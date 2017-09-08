@@ -5,11 +5,7 @@
     var rooms = $firebaseArray(ref);
 
     Room.all = rooms;
-
-
-  };
-
-
+    console.log("Hello!");
     return Room;
   }
 
