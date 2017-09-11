@@ -1,15 +1,23 @@
-<div class="modal-header" ng-controller="ModalCtrl as modal">
+<body class = "Modal">
+<div class="modal-header" >
 	<h3 class="modal-title">New Chat Room</h3>
 </div>
 <div class="modal-body">
 	<div class="form-group">
-		<input type="text" placeholder="New chat room name" class="form-control">
+		<input type="text" placeholder="New chat room name" class="form-control" ng-model = "modal.roomName">
 	</div>
 </div>
 <div class="modal-footer">
 
-	<button class="btn" type="button" ng-click="modal.closeModalCancel()">Cancel</button>
+	<button class="btn" type="button"  ng-click="modal.closeModalCancel()">Cancel</button>
 	<button class="btn" type="button" ng-click="modal.closeModalSuccess()">OK</button>
 </div>
+</body>
 
-<!-- on line 6, I removed "ng-model = '$uibModalInstance'" -->
+<!-- on line 6, I removed "ng-model = '$uibModalInstance'"
+removed from line 1: ng-controller="ModalCtrl as modal"
+ line 12 ng-click="modal.closeModalCancel()" -->
+<!-- ng-click="$dismiss('cancel')" -->
+<!-- ng-model = "modal.roomName"  This means that
+whatever the user types in to this box will be
+assigned the variable roomName in ModalCtrl -->

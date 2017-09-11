@@ -6,6 +6,11 @@
 
     Room.all = rooms;
     console.log("Hello!");
+
+    Room.addRoom = function(roomName) {
+      rooms.$add(roomName);
+    }
+
     return Room;
   }
 

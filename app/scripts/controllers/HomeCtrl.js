@@ -3,8 +3,8 @@
       this.rooms = Room.all;
       this.openModal = function() {
         $uibModal.open({
-          controller: 'HomeCtrl',
-          controllerAs: 'home',
+          controller: 'ModalCtrl',
+          controllerAs: 'modal',
           templateUrl: '/templates/modal.html'
         });
       };
