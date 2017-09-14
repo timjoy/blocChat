@@ -4,19 +4,24 @@
   </div>
 
   <div id="content">
-    <h3> Active Room </h3>
+    <!-- <h3 ng-show="home.room.activeroom"> Active Room </h3> -->
+    <!-- <h3 ng-model="home.room.activeroom"> Active Room {{home.room}}</h3> -->
+    <h3 > Active Room {{home.room.setActive.activeroom}}</h3>
+    <!-- <h3 > {{ home.setactive.activeroom }} </h3> -->
+    <!-- shows the active room created in the
+    room.setActive function-->
       <h4 class = "title"></h4>
+
       <!-- <p>ng-repeat{{home.activeRoom.message}}</p> -->
   </div>
 
   <div id="sidebar" ng-repeat="room in home.rooms">
-    <a ng-click="home.activeRoom(room)">{{ room.$value }}</a>
+    <a ng-click="home.setActive(room)">{{ room.$value }}</a>
+    <!-- <a ng-click="home.setActive(room)" ng-model="home.activeroom" >{{ room.$value }}</a>
+    <a ng-click="(ng-model="home.activeroom)" >{{ room.$value }}</a> -->
   </div>
-
+  <!-- <button class="btn" type="button" ng-click="modal.closeModalSuccess()">Select a room</button> -->
   <div id="footer">
     <button class="btn" type="button" ng-click="home.openModal()">Open Modal</button>
   </div>
 </div>
-
-<!-- ng-click = "home.activeRoom.setActiveRoom" -->
-<!-- {{ room.$value }} -->
