@@ -13,16 +13,17 @@
       // Room.add(roomName);
     }
 
-    // var activeroom = null;
+    Room.activeroom = "kayak";
     Room.SetActive = function(room) {
       // get roomID
       // use roomID to set it to active
       console.log("activeroom!");
-      var activeroom = room;
+      Room.activeroom = room;
+      console.log(Room.activeroom);
       // Do I need to access the database here?
       // var activeroom = room.roomID;
       // use roomID to set it to active
-      return activeroom;
+
 
     }
     return Room;
