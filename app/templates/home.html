@@ -17,7 +17,7 @@
 
   <div id="sidebar" >
     <div ng-repeat="room in home.rooms">
-      <a ng-click="home.setActive(room)">{{ room.$value }}</a>
+      <a ng-click="home.setActive(room)" ng-click="home.message.getByRoomId(room)">{{ room.$value }}</a>
     <!-- <a ng-click="home.setActive(room)" ng-model="home.activeroom" >{{ room.$value }}</a>
     <a ng-click="(ng-model="home.activeroom)" >{{ room.$value }}</a> -->
     </div>

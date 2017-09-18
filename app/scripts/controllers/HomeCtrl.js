@@ -4,7 +4,7 @@
 
       this.room = Room;
 
-      this.message = Message;
+
 
       this.openModal = function() {
         $uibModal.open({
@@ -19,6 +19,14 @@
         Room.SetActive(room);
       };
 
+      this.message = Message;
+
+      this.getByRoomId = function(room){
+        Message.GetByRoomId(room);
+      }
+
+
+
 
       // Room.addRoom = function(roomName) {
       //   rooms.$add(roomName);
@@ -29,7 +37,7 @@
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', 'Message', '$uibModal', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message',  '$uibModal', HomeCtrl]);
 })();
 
  // activeRoom,

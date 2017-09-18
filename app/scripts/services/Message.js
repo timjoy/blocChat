@@ -8,14 +8,16 @@
     // Room.activeroom.UID = activeroomId;
     // Room.activeroom = activeroomId;
     console.log("roomId!!!");
-    Room.activeroom.$UID = activeroomId;
-    console.log("roomId!!!");
-    Message.getByRoomId = function(roomId) {
+    // Room.activeroom.$Id = activeroomId;
+    console.log(Room.activeroom);
+    Message.GetByRoomId = function(room) {
       // Filter the messages by their room ID.
       // ref.orderByChild(Message.roomId).equalTo()...
-      ref.orderByChild("roomId").equalTo(activeroomId);
+      Message = ref.orderByChild("roomId").equalTo(room.roomId);
         console.log(snapshot.val());
-        console.log (roomId, activeroomId);
+        console.log (roomId);
+
+
     };
 
     // this is a query that finds all messages that have
