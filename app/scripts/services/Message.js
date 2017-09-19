@@ -3,21 +3,37 @@
     var Message = {};
     var ref = firebase.database().ref().child("messages");
     var messages = $firebaseArray(ref);
+
+    Message.current = messages;
+    Message.current = null;
+    // assigns the $firebaseArray to the Message object
+
     // (the UID of the Room.activeroom) = activeroomId;
     // Room.activeroom.Id = roomId;
     // Room.activeroom.UID = activeroomId;
     // Room.activeroom = activeroomId;
     console.log("roomId!!!");
     // Room.activeroom.$Id = activeroomId;
-    console.log(Room.activeroom);
-    Message.GetByRoomId = function(room) {
+
+    Message.getByRoomId = function(room) {
       // Filter the messages by their room ID.
       // ref.orderByChild(Message.roomId).equalTo()...
-      Message = ref.orderByChild("roomId").equalTo(room.roomId);
-        console.log(snapshot.val());
-        console.log (roomId);
+
+      var newref = ref.orderByChild("roomId").equalTo(room.$id);
 
 
+      // the next line converts the filtered data
+      // to a useable array
+      Message.current = $firebaseArray(newref);
+      // Message = Message.current;
+      console.log('room.$id', room.$id);
+      console.log('Message.current', Message.current);
+      messages.$add(Message.current);
+      // Message = Message.current;
+      // return Message;
+      return Message.current;
+      // return Message.current.orderByChild("content");
+      // return Message.current.Child("content");
     };
 
     // this is a query that finds all messages that have

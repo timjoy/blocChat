@@ -17,12 +17,13 @@
       this.setActive = function(room){
         // Room.SetActive(this.activeroom);
         Room.SetActive(room);
+        Message.getByRoomId(room);
       };
 
       this.message = Message;
 
       this.getByRoomId = function(room){
-        Message.GetByRoomId(room);
+        Message.getByRoomId(room);
       }
 
 

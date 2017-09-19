@@ -6,6 +6,8 @@
     var rooms = $firebaseArray(ref);
 
     Room.all = rooms;
+    // assigns the $firebaseArray to all Room
+    // functions and variables
     console.log("Hello!");
 
     Room.addRoom = function(roomName) {
@@ -19,8 +21,8 @@
       // use roomID to set it to active
       console.log("activeroom!");
       Room.activeroom = room;
-      console.log(Room.activeroom);
-      console.log(RoomId);
+      console.log('Room.activeroom', Room.activeroom);
+      console.log('room.$id', room.$id);
       // Do I need to access the database here?
       // var activeroom = room.roomID;
       // use roomID to set it to active
