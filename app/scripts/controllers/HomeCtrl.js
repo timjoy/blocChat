@@ -26,12 +26,7 @@
         Message.getByRoomId(room);
       }
 
-
-
-
-      // Room.addRoom = function(roomName) {
-      //   rooms.$add(roomName);
-      // }
+      
 
     }
 
