@@ -12,14 +12,18 @@
         // argument, as per Angular documentation?
         // $cookies.put(key, value)
         console.log(this.username);
-
+        // The following if statement is to prevent
+        // the user from being allowed to enter
+        // no name or empty space.
         if(this.username){
           $cookies.put("username", this.username);
           // username = CurrentUser;
           // console.log("$cookies.get(CurrentUser)", $cookies.get(CurrentUser));
-          $uibModalInstance.close()
+          $uibModalInstance.close();
         }
       };
+
+      
 
       console.log('SetUNController!!');
     }

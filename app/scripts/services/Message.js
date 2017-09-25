@@ -3,9 +3,11 @@
     var Message = {};
     var ref = firebase.database().ref().child("messages");
     var messages = $firebaseArray(ref);
-
+    // newmessage = messages;
     Message.current = messages;
     Message.current = null;
+
+
     // assigns the $firebaseArray to the Message object
 
     // (the UID of the Room.activeroom) = activeroomId;
@@ -36,11 +38,40 @@
       // return Message.current.Child("content");
     };
 
+    Message.send = function(newMessage){
+      // make a reference to the database
+      // var messref = firebase.database().ref().child("messages");
+      // newMessage = $firebaseArray(messref);
+      // messref.$set({
+      //   newMessage
+      // });
+      console.log("newMessage!!!!!!");
+
+      // var messref = ref.child("messages");
+      // var newMessref.push();
+      // newMessref.set({
+      //   content: "newMessage";
+      // });
+
+      messages.$add(newMessage);
+      messages = Message.current;
+      return messages;
+      return Message.current;
+
+
+
+    };
     // this is a query that finds all messages that have
     // a roomId (of the activeroom) that is equal to
     // (the roomId of activeroom(in home.html?))
 
-
+    // Message.addMessage = function(newmessage,room) {
+    //
+    //   var newref = ref.orderByChild("roomId").equalTo(room.$id);
+    //   newmessage = $firebaseArray(newref);
+    //   messages.$add(newmessage);
+    //   // Room.add(roomName);
+    // }
 
     // .child() method can either query an existing set of
     // data or reference one you intend to populate with

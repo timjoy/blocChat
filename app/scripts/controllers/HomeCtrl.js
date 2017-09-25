@@ -24,9 +24,18 @@
 
       this.getByRoomId = function(room){
         Message.getByRoomId(room);
-      }
+      };
 
-      
+      this.openMessModal = function() {
+        console.log("create and send message!!")
+        $uibModal.open({
+          controller: 'MessModalCtrl',
+          controllerAs: 'messmodal',
+          templateUrl: '/templates/messmodal.html'
+        });
+      };
+
+
 
     }
 

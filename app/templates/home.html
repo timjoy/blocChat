@@ -11,9 +11,10 @@
     <!-- shows the active room created in the
     room.setActive function-->
       <ul  ng-repeat="message in home.message.current">
-        <b>{{ message.username }}</b><li>{{ message.content }}</li>  {{ message.sentAt }}</li>
+        <b>{{ message.username }}</b> <li>{{ message.content }}</li>  {{ message.sentAt }}</li>
       <!-- <p>ng-repeat{{home.activeRoom.message}}</p> -->
       </ul>
+      <button class="btn" type="button" ng-click="home.openMessModal()">Create & Send A Message</button>
   </div>
 
   <div id="sidebar" >
