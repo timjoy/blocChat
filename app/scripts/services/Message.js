@@ -45,7 +45,8 @@
       // messref.$set({
       //   newMessage
       // });
-      console.log("newMessage!!!!!!");
+      console.log("newMessage!!!!!!", newMessage);
+
 
       // var messref = ref.child("messages");
       // var newMessref.push();
@@ -53,10 +54,15 @@
       //   content: "newMessage";
       // });
 
-      messages.$add(newMessage);
+
+      // messages.$add(newMessage);
+      messages.$add({content: newMessage, roomId: "-Ku-4b4frLOVOe7NGzfJ", sentAt:"whateverTime", username: "Tim"});
       messages = Message.current;
-      return messages;
+      // return messages;
       return Message.current;
+      // console.log(Message.current.room.$id;)
+
+
 
 
 
